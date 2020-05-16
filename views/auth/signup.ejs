@@ -1,0 +1,107 @@
+<% include ../partials/header %>
+
+<div class="card mx-auto" style="max-width: 500px; margin-top: 100px; margin-bottom: 10px;">
+  <article class="card-body">
+    <div class="row">
+      <div class="col-md-9">
+        <h4 class="card-title mt-3 text-center text-md-left">
+          Create Brooks Account
+        </h4>
+      </div>
+      <div class="col-md-3">
+        <div class="container mx-auto mb-3" style="max-width: 100px;">
+          <img src="/images/logo.png" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+
+    <form action="/auth/signup" class="bg-light contact-form" method="POST">
+      <input type="hidden"  id="_csrf" name="_csrf" value="<%=csrfToken%>" />
+      <!-- FullName Input -->
+      <div class="form-group input-group">
+        <input
+          name="fullname"
+          class="form-control"
+          placeholder="Full Name"
+          type="text"
+          required
+        />
+      </div>
+
+      <!-- E-mail Input -->
+      <div class="form-group input-group">
+        <input
+        name="email"
+        class="form-control"
+        placeholder="Email address"
+        type="email"
+        required
+      />
+      </div>
+      <!-- Telephone Number -->
+      <div class="form-group input-group">
+        <input
+        name="telephone"
+        class="form-control"
+        placeholder="Phone number"
+        type="text"
+      />
+      </div>
+
+      <!-- Password Input -->
+      <div class="form-group input-group">
+        <input
+        id="txtPassword"
+        name="password"
+        class="form-control"
+        placeholder="Create password"
+        type="password"
+        required
+      />
+      </div>
+
+      <!-- Repeat Password Input -->
+      <div class="form-group input-group">
+        <input
+        id="txtConfirmPassword"
+        name="confirm-password"
+        class="form-control"
+        placeholder="Repeat password"
+        type="password"
+        required
+      />
+       
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <input
+          type="submit"
+          class="btn btn-primary btn-block"
+          value="Create Account"
+          onclick="return Validate()"
+        />
+      </div>
+
+      <!-- Login Link -->
+
+      <div class="row">
+        <div class="col-5">
+          <p>
+            <a href="/auth/signin" class="btn btn-outline-primary">Log In</a>
+          </p>
+        </div>
+        <div class="col-7">
+          <p class="text-right">
+            <a href="/auth/verify" class="btn btn-outline-primary"
+              >Resend Verification Mail</a
+            >
+          </p>
+        </div>
+      </div>
+    </form>
+  </article>
+</div>
+
+<% include ../partials/footer %>
+<!-- <script type="text/javascript" src="/javascripts/fixfooter.js"></script> -->

@@ -6,11 +6,26 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "app-root-path": "^3.0.0",
+    "aws-sdk": "^2.677.0",
+    "bcrypt": "^4.0.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
     "cookie-parser": "~1.4.4",
+    "crypto": "^1.0.1",
+    "csurf": "^1.11.0",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.4.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "mongoose": "^5.9.14",
+    "morgan": "~1.9.1",
+    "nodemailer": "^6.4.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.2.1"
   }
 }

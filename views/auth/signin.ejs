@@ -1,0 +1,67 @@
+<% include ../partials/header %>
+
+<div class="card mx-auto" style="max-width: 500px; margin-top: 100px; margin-bottom: 10px;">
+  <div class="card">
+    <article class="card-body">
+      <div class="row">
+        <div class="col-md-9">
+          <h4 class="card-title mt-3 text-center text-md-left">
+            Sign Into Your Account
+          </h4>
+        </div>
+        <div class="col-md-3">
+          <div class="container mx-auto mb-3" style="max-width: 100px;">
+            <img src="/images/logo.png" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <form
+        action="/auth/signin"
+        class="bg-light contact-form"
+        method="POST" 
+      >
+      <input type="hidden"  id="_csrf" name="_csrf" value="<%=csrfToken%>" />
+        <div class="form-group">
+          <input
+            name="email"
+            class="form-control"
+            placeholder="Your Email"
+            type="email"
+          />
+        </div>
+        <!-- form-group// -->
+
+        <div class="form-group">
+          <input
+            class="form-control"
+            placeholder="******"
+            type="password"
+            name="password"
+          />
+        </div>
+        <!-- form-group// -->
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </div>
+        <!-- form-group// -->
+      </form>
+      <div class="row">
+        <div class="col-6">
+          <a href="/auth/forgotpassword" class="btn btn-outline-primary"
+            >Forgot password</a
+          >
+        </div>
+        <div class="col-6 text-right">
+          <a href="/auth/signup" class="btn btn-outline-primary">SignUp</a>
+        </div>
+      </div>
+    </article>
+  </div>
+  <!-- card.// -->
+</div>
+
+
+<% include ../partials/footer %>
+<script src="/javascripts/fixfooter.js"></script>
